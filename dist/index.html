@@ -7,6 +7,33 @@
   <title>Form validation - Constraint validation API</title>
 </head>
 <body>
-  
+  <form novalidate>
+    <div class="input-group">
+      <label for="mail">Email:</label>
+      <input class="input" type="email" name="mail" id="mail" required>
+      <span aria-live="assertive" class="error, error--email"></span>
+    </div>
+    <div class="input-group">
+      <label for="country">Country:</label>
+      <select class="input input--select input--country" name="country" id="country" required></select>
+      <span aria-live="assertive" class="error, error--country"></span>
+    </div>
+    <div class="input-group">
+      <label for="zip">Zip code:</label>
+      <input class="input" type="number" name="zip" id="zip" required>
+      <span aria-live="assertive" class="error, error--zip"></span>
+    </div>
+    <div class="input-group">
+      <label for="pass">Password:</label>
+      <input class="input" type="password" name="pass" id="pass" required>
+      <span aria-live="assertive" class="error, error--pass"></span>
+    </div>
+    <div class="input-group">
+      <label for="confpass">Password:</label>
+      <input class="input" type="password" name="confpass" id="confpass" required>
+      <span aria-live="assertive" class="error, error--confpass"></span>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
 </body>
 </html>
