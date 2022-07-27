@@ -1,0 +1,14 @@
+input:focus:valid {
+  border-color: green;
+  outline: 1px green solid;
+}
+
+input:focus:invalid {
+  border-color: red;
+  outline: 1px red solid;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
