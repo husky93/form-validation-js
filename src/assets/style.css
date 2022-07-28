@@ -40,7 +40,7 @@ label {
   border-radius: 6px;
 }
 
-input, select {
+input{
   color: var(--text-light);
   background: 
   linear-gradient(var(--bg-color-light), var(--bg-color-light)) padding-box,
@@ -48,6 +48,17 @@ input, select {
   border: 2px solid transparent;
   border-radius: 6px;
   padding: 6px 24px;
+  font-size: 14px;
+  outline: none;
+  font-family: 'Uchen', serif;
+}
+
+select {
+  border-radius: 6px;
+  padding: 6px 24px;
+  background-color: var(--bg-color-light);
+  border: 2px solid var(--border-color);
+  color: var(--text-light);
   font-size: 14px;
   outline: none;
   font-family: 'Uchen', serif;
