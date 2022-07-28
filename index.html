@@ -19,7 +19,7 @@
     </div>
     <div class="input-group">
       <label for="zip">Zip code:</label>
-      <input class="input" type="number" name="zip" id="zip" required>
+      <input class="input" type="number" name="zip" id="zip" min="10000" max="99999" minlength="5" maxlength="5" required>
       <span aria-live="assertive" class="error error--zip"></span>
     </div>
     <div class="input-group">
