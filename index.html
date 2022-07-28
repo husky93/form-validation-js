@@ -24,12 +24,12 @@
     </div>
     <div class="input-group">
       <label for="pass">Password:</label>
-      <input class="input" type="password" name="pass" id="pass" required>
+      <input class="input" type="password" name="pass" id="pass" pattern="^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,}$" required>
       <span aria-live="assertive" class="error error--pass"></span>
     </div>
     <div class="input-group">
       <label for="confpass">Confirm Password:</label>
-      <input class="input" type="password" name="confpass" id="confpass" required>
+      <input class="input" type="password" name="confpass" id="confpass" pattern="^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,}$" required>
       <span aria-live="assertive" class="error error--confpass"></span>
     </div>
     <button type="submit">Submit</button>
