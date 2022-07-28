@@ -9,7 +9,6 @@ const validateForm = (() => {
   const passError = document.querySelector('.error--pass');
   const confPassError = document.querySelector('.error--confpass');
   let passwordsMatching = false;
-  let passCorrectPattern = false;
 
   const showError = () => {
     switch (true) {

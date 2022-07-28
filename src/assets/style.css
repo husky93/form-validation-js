@@ -1,14 +1,120 @@
+:root {
+  --bg-color: #101010;
+  --bg-color-light:#171717; 
+  --border-color: #1d1d1d;
+  --text-dim: #5b5b5b;
+  --text-medium: #a0a0a0;
+  --text-light: #fdfdfd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Uchen', serif;
+  text-align: center;
+  background-color: var(--bg-color);
+  color: var(--text-light);
+}
+
+form {
+  max-width: 1296px;
+  padding: 24px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+label {
+  color: var(--text-medium);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.error {
+  font-size: 13px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+}
+
+input, select {
+  color: var(--text-light);
+  background: 
+  linear-gradient(var(--bg-color-light), var(--bg-color-light)) padding-box,
+  linear-gradient(to right, var(--border-color), var(--border-color)) border-box;;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  padding: 6px 24px;
+  font-size: 14px;
+  outline: none;
+  font-family: 'Uchen', serif;
+}
+
+input::placeholder {
+  color: var(--text-dim);
+}
+
 input:focus:valid {
-  border-color: green;
-  outline: 1px green solid;
+  background: 
+  linear-gradient(var(--bg-color-light), var(--bg-color-light)) padding-box,
+  linear-gradient(90deg, rgba(138,255,91,0.83) 0%, rgba(10,161,42,1) 100%) border-box;
 }
 
 input:focus:invalid {
-  border-color: red;
-  outline: 1px red solid;
+  background: 
+  linear-gradient(var(--bg-color-light), var(--bg-color-light)) padding-box,
+  linear-gradient(90deg, rgba(255,71,71,0.83) 0%, rgba(208,11,45,1) 100%) border-box;
+}
+
+/* Chrome autofill styles change */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 2px solid var(--border-color);
+  -webkit-text-fill-color: var(--text-light);
+  -webkit-box-shadow: 0 0 0px 1000px var(--bg-color-light) inset;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 .input-group {
+  min-width: 100%;
   display: flex;
   flex-direction: column;
+}
+
+button {
+  border: 2px solid transparent;
+  background: linear-gradient(90deg, rgba(180,21,221,1) 0%, rgba(208,39,164,1) 100%) padding-box, 
+  linear-gradient(90deg, rgba(208,39,164,1) 0%,rgba(180,21,221,1) 100%) border-box;
+  color: var(--text-light);
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 24px;
+  padding: 12px 68px;
+  transition: all 0.5s;
+}
+
+@media screen and (min-width: 768px) {
+  .input-group {
+    min-width: 75%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .input-group {
+    min-width: 50%;
+    width: 50%;
+  }
 }
